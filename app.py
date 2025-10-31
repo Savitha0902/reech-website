@@ -8,9 +8,12 @@ app.secret_key = "reech_secret_key"
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'reechsoapworks24@gmail.com'  # 🔹 replace this
-app.config['MAIL_PASSWORD'] = 'ttqq wxif iyep ameb'     # 🔹 replace this (Google App Password)
-app.config['MAIL_DEFAULT_SENDER'] = ('REECH Website', 'reechsoapworks24@gmail.com')
+import os
+
+app.config['MAIL_USERNAME'] = os.environ.get('MAIL_USERNAME')
+app.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD')
+app.config['MAIL_DEFAULT_SENDER'] = ('REECH Website', os.environ.get('MAIL_USERNAME'))
+
 
 mail = Mail(app)
 
