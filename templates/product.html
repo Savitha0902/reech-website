@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REECH | Products</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        
+            <h1 class="brand-name">REECH</h1>
+        
+
+        <nav class="nav-links">
+            <a href="/">Home</a>
+            <a href="/products" class="active">Products</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Product Section -->
+    <section class="product-page">
+        <h2>Our Premium Products</h2>
+        <p class="sub-text">Crafted with care — for every home and every need.</p>
+
+        <div class="product-gallery">
+            <div class="product-box">
+                <img src="{{ url_for('static', filename='images/laundry_soap.jpg') }}" alt="Laundry Soap">
+                <h3>Laundry Soap XL</h3>
+                <p>Long Lasting Freshness For Heavy Loads.</p>
+            </div>
+
+            <div class="product-box">
+                <img src="{{ url_for('static', filename='images/diswashing_liquid.jpg') }}" alt="Dishwashing Liquid">
+                <h3>laundry soap</h3>
+                <p>Brightens clothes and keeps them fresh.</p>
+            </div>
+
+            <div class="product-box">
+                <img src="{{ url_for('static', filename='images/detergent_liquid.jpg') }}" alt="Detergent Liquid">
+                <h3>Detergent Liquid</h3>
+                <p>Perfect for deep cleaning and soft fabrics.</p>
+            </div>
+
+            <div class="product-box">
+                <img src="{{ url_for('static', filename='images/phenyl.jpg') }}" alt="Phenyl">
+                <h3>Phenyl</h3>
+                <p>Disinfects and leaves a long-lasting fragrance.</p>
+            </div>
+
+            <div class="product-box">
+                <img src="{{ url_for('static', filename='images/fabric_conditioner.jpg') }}" alt="Fabric Conditioner">
+                <h3>Fabric Conditioner</h3>
+                <p>Softens fabric and adds a refreshing aroma.</p>
+            </div>
+
+            <!-- 🧼 New Product Added -->
+            <div class="product-box">
+                <img src="{{ url_for('static', filename='images/dishwashing_soap.jpg') }}" alt="Dishwashing Soap">
+                <h3>Dishwashing Soap</h3>
+                <p>Powerful grease removal with a pleasant scent — gentle on your hands!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 <strong>REECH</strong> | Designed by <strong>Savi 💙</strong></p>
+    </footer>
+
+</body>
+</html>
