@@ -3,51 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REECH | Contact</title>
+    <title>REECH | Contact Us</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
 
     <!-- Header -->
     <header class="header">
-        
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="REECH Logo" class="logo">
             <h1 class="brand-name">REECH</h1>
-        
+        </div>
         <nav class="nav-links">
             <a href="/">Home</a>
             <a href="/products">Products</a>
             <a href="/about">About</a>
-            <a href="/contact">Contact</a>
+            <a href="/contact" class="active">Contact</a>
         </nav>
     </header>
 
-    <!-- Contact Section -->
+    <!-- Contact Page -->
     <section class="contact-page">
-        <h1>Contact Us</h1>
-        <p>We’d love to hear from you! Send us a message and we’ll get back to you soon 💙</p>
+        <h1>Contact Us 💬</h1>
+        <p>We’d love to hear from you! Fill in the form below and we’ll get back to you soon.</p>
 
-        <form action="/contact" method="POST" class="contact-form">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <!-- ✅ Working Contact Form (Formspree) -->
+        <form action="https://formspree.io/f/mwpwrdkn" method="POST" class="contact-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="_replyto" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
             <button type="submit" class="btn">Send Message</button>
         </form>
 
-        {% with messages = get_flashed_messages(with_categories=true) %}
-          {% if messages %}
-            <div class="flash-container">
-              {% for category, msg in messages %}
-                <p class="flash {{ category }}">{{ msg }}</p>
-              {% endfor %}
-            </div>
-          {% endif %}
-        {% endwith %}
-
         <div class="contact-info">
-            <h2>Our Office</h2>
-            <p>Email: reechsoapworks24@gmail.com</p>
-            <p>Phone: +91 8270599079,+91 8778808621</p>
-            <p>Location: Devadhanam,RAJAPALAYAM -626 121, Tamil Nadu</p>
+            <h2>📞 Get in Touch</h2>
+            <p><strong>Phone:</strong> <a href="tel:+918270599079">+91 82705 99079</a></p>
+            <p><strong>Email:</strong> <a href="mailto:reechsoapworks24@gmail.com">reechsoapworks24@gmail.com</a></p>
         </div>
     </section>
 
